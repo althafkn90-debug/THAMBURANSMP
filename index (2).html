@@ -1,57 +1,136 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080812">
-<title>THAMBURAN SMP | Official Website</title>
+<title>THAMBURAN SMP</title>
 <style>
-:root{--bg:#080812;--panel:rgba(20,20,38,.78);--text:#f7f7ff;--muted:#aaaac2;--cyan:#42e8ff;--pink:#ff42c6;--purple:#8b5cff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 15%,#252052 0,transparent 32%),radial-gradient(circle at 85% 35%,#32143c 0,transparent 28%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent)}
-nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(8,8,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18}
-.logo{font-weight:900;letter-spacing:2px;font-size:18px;background:linear-gradient(90deg,var(--cyan),var(--pink),var(--purple));background-clip:text;color:transparent}
-nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:13px;font-weight:bold}nav a:hover{color:var(--cyan)}
-.hero{min-height:80vh;display:grid;place-items:center;text-align:center;padding:80px 20px;position:relative}
-.hero-inner{max-width:850px}.eyebrow{color:var(--cyan);letter-spacing:5px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(48px,10vw,100px);line-height:.98;margin:20px 0;background:linear-gradient(100deg,#fff 10%,var(--cyan),var(--pink),#fff);background-size:250%;background-clip:text;color:transparent;animation:shine 6s linear infinite;text-shadow:0 0 55px #a34dff33}
-@keyframes shine{to{background-position:250% center}}.hero p{color:var(--muted);font-size:18px;line-height:1.7}
-.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}.btn{border:0;border-radius:12px;padding:15px 22px;font-weight:900;text-decoration:none;color:#080812;background:linear-gradient(100deg,var(--cyan),#b5faff);box-shadow:0 0 25px #42e8ff35;cursor:pointer}.btn.alt{color:white;background:linear-gradient(100deg,#792cff,#ed3eb8)}
-section{padding:65px 7%;max-width:1200px;margin:auto}.section-title{text-align:center;font-size:32px;margin:0 0 12px}.sub{text-align:center;color:var(--muted);margin:0 0 34px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:var(--panel);border:1px solid #ffffff18;border-radius:18px;padding:25px;box-shadow:0 15px 50px #0004;transition:.25s}.card:hover{transform:translateY(-6px);border-color:#42e8ff88}.card h3{margin:0 0 12px;font-size:20px}.card p{color:var(--muted);line-height:1.65;margin:0}.number{font-size:32px;margin-bottom:12px}
-.ipbox{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;background:#101023;border:1px solid #42e8ff55;border-radius:16px;padding:20px;max-width:600px;margin:25px auto}.ip{font-family:monospace;font-size:clamp(16px,4vw,22px);font-weight:bold;overflow-wrap:anywhere}
-.rank{position:relative;overflow:hidden}.rank:before{content:"";position:absolute;width:130px;height:130px;right:-55px;top:-55px;border-radius:50%;background:#a44cff22;filter:blur(4px)}.price{font-size:28px;font-weight:900;color:var(--cyan);margin:12px 0}
-footer{text-align:center;color:#8888a4;padding:30px 15px;border-top:1px solid #ffffff15;font-size:13px}
-@media(max-width:600px){nav{padding:15px 5%}nav a{margin-left:10px;font-size:11px}.hero{min-height:72vh}section{padding:48px 5%}.hero p{font-size:16px}}
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:white;
+ background:linear-gradient(135deg,#080812,#171033,#080812);
+ text-align:center;
+}
+header{padding:90px 15px}
+h1{
+ font-size:clamp(40px,9vw,85px);
+ background:linear-gradient(90deg,#00eaff,#ff35cb,#a855ff);
+ background-clip:text;
+ color:transparent;
+}
+h2{color:#42e8ff}
+p{color:#c5c5d8;line-height:1.7}
+nav{padding:20px;background:#101020}
+nav a{color:white;text-decoration:none;margin:12px}
+section{padding:55px 15px}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px;max-width:950px;margin:auto
+}
+.card{
+ background:#17172c;
+ border:1px solid #42e8ff;
+ border-radius:15px;
+ padding:25px;
+ box-shadow:0 0 15px #42e8ff33;
+}
+button,.btn{
+ display:inline-block;
+ padding:14px 22px;
+ border:0;border-radius:10px;
+ background:linear-gradient(90deg,#00eaff,#ff35cb);
+ color:#080812;font-weight:bold;
+ text-decoration:none;cursor:pointer;
+ margin:8px;
+}
+.ip{font-size:20px;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
-<nav><div class="logo">✦ THAMBURAN SMP</div><div><a href="#rules">RULES</a><a href="#ranks">RANKS</a><a href="#join">JOIN</a></div></nav>
-<header class="hero"><div class="hero-inner">
-<div class="eyebrow">YOUR ADVENTURE STARTS HERE</div>
+
+<nav>
+<b>✦ THAMBURAN SMP ✦</b>
+<br><br>
+<a href="#rules">RULES</a>
+<a href="#ranks">RANKS</a>
+<a href="#join">JOIN</a>
+</nav>
+
+<header>
+<p>WELCOME TO</p>
 <h1>THAMBURAN SMP</h1>
-<p>Build your world. Make friends. Explore together.<br>A friendly Minecraft community where everyone matters.</p>
-<div class="actions"><a class="btn" href="#join">JOIN THE SERVER</a><a class="btn alt" href="https://discord.gg/EeFSnDQm2" target="_blank" rel="noopener">JOIN DISCORD</a></div>
-</div></header>
-<section id="rules"><h2 class="section-title">SERVER RULES</h2><p class="sub">Play fair, be kind, and help keep our SMP fun for everyone.</p>
+<p>BUILD • SURVIVE • EXPLORE</p>
+<a class="btn" href="#join">PLAY NOW</a>
+<a class="btn" href="https://discord.gg/EeFSnDQm2">DISCORD</a>
+</header>
+
+<section id="rules">
+<h2>SERVER RULES</h2>
 <div class="grid">
-<div class="card"><div class="number">⚔️</div><h3>NO PvP</h3><p>Player versus player fighting is not allowed. Keep the server peaceful.</p></div>
-<div class="card"><div class="number">🛡️</div><h3>NO GRIEFING</h3><p>Never destroy, steal from, or damage another player's builds or items.</p></div>
-<div class="card"><div class="number">🤝</div><h3>RESPECT EVERYONE</h3><p>Be respectful to all players and staff. No bullying, harassment, or hate.</p></div>
-<div class="card"><div class="number">💬</div><h3>BE FRIENDLY</h3><p>Keep chat friendly. No spam, advertising, or abusive language.</p></div>
-</div></section>
-<section id="ranks"><h2 class="section-title">SERVER RANKS</h2><p class="sub">Support the server and show off your rank.</p>
-<div class="grid">
-<div class="card rank"><h3>💎 VIP</h3><div class="price">50</div><p>VIP rank package. Ask staff on Discord for purchase details and perks.</p></div>
-<div class="card rank"><h3>👑 MVP</h3><div class="price">50</div><p>MVP rank package. Ask staff on Discord for purchase details and perks.</p></div>
-</div></section>
-<section id="join"><h2 class="section-title">JOIN OUR SMP</h2><p class="sub">Copy the server address and connect in Minecraft.</p>
-<div class="ipbox"><span class="ip" id="serverip">145.79.134.156:20001</span><button class="btn" onclick="copyIP()">COPY IP</button></div>
-<div class="actions"><a class="btn alt" href="https://discord.gg/EeFSnDQm2" target="_blank" rel="noopener">DISCORD COMMUNITY</a></div>
-<p id="copystatus" class="sub" aria-live="polite" style="margin-top:15px"></p>
+<div class="card">
+<h3>⚔️ NO PVP</h3>
+<p>No player fighting allowed.</p>
+</div>
+<div class="card">
+<h3>🛡️ NO GRIEFING</h3>
+<p>Never destroy or steal another player's builds or items.</p>
+</div>
+<div class="card">
+<h3>🤝 RESPECT EVERYONE</h3>
+<p>Respect every player and staff member.</p>
+</div>
+<div class="card">
+<h3>💬 BE FRIENDLY</h3>
+<p>No bullying, spam or abusive language.</p>
+</div>
+</div>
 </section>
-<footer>© 2026 SMP SERVER • Play fair • Respect everyone</footer>
+
+<section id="ranks">
+<h2>SERVER RANKS</h2>
+<div class="grid">
+<div class="card">
+<h3>💎 VIP</h3>
+<h2>50</h2>
+<p>VIP RANK</p>
+</div>
+<div class="card">
+<h3>👑 MVP</h3>
+<h2>50</h2>
+<p>MVP RANK</p>
+</div>
+</div>
+</section>
+
+<section id="join">
+<h2>JOIN THAMBURAN SMP</h2>
+<p class="ip" id="ip">145.79.134.156:20001</p>
+<button onclick="copyIP()">COPY SERVER IP</button>
+<br>
+<a class="btn" href="https://discord.gg/EeFSnDQm2">
+JOIN DISCORD
+</a>
+<p id="message"></p>
+</section>
+
+<footer>
+<p>© 2026 THAMBURAN SMP</p>
+<p>PLAY FAIR • RESPECT EVERYONE</p>
+</footer>
+
 <script>
-function copyIP(){const ip=document.getElementById('serverip').textContent;navigator.clipboard.writeText(ip).then(()=>{document.getElementById('copystatus').textContent='Server IP copied!'}).catch(()=>{document.getElementById('copystatus').textContent='Copy this IP: '+ip;});}
+function copyIP(){
+ navigator.clipboard.writeText(
+ document.getElementById("ip").innerText
+ ).then(()=>{
+ document.getElementById("message").innerText=
+ "SERVER IP COPIED!";
+ });
+}
 </script>
-</body></html>
+</body>
+</html>
